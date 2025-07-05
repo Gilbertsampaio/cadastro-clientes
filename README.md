@@ -118,4 +118,6 @@ Um sistema funcional, moderno, leve e fácil de manter para gerenciar clientes c
 
 ---
 
+## Todos os demais menus e links criados são meramente ilustrativos
+
 ## 👨‍💻 Desenvolvido com 💻 e ☕ por **Gilbert Sampaio**
