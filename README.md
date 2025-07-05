@@ -1,35 +1,35 @@
-# ?? Sistema de Cadastro de Clientes - CodeIgniter 4
+# 📋 Sistema de Cadastro de Clientes - CodeIgniter 4
 
-Este � um sistema b�sico de cadastro de clientes desenvolvido com **CodeIgniter 4**, utilizando o padr�o **MVC**, com foco em organiza��o, responsividade e facilidade de uso.
-
----
-
-## ?? Requisitos do Projeto
-
-- **CodeIgniter**: vers�o 4.0  
-- **XAMPP**: vers�o 3.2.4 (com PHP 7.x)  
-- **Bootstrap**: vers�o 5 para layout responsivo  
-- **Extens�o PHP**: `intl` (necess�ria para o funcionamento do CodeIgniter 4)
+Este é um sistema básico de cadastro de clientes desenvolvido com **CodeIgniter 4**, utilizando o padrão **MVC**, com foco em organização, responsividade e facilidade de uso.
 
 ---
 
-## ?? Funcionalidades
+## ⚙️ Requisitos do Projeto
 
-- ? Criar novo cliente  
-- ? Editar cliente existente  
-- ? Excluir cliente  
-- ? Listar clientes com:
+- **CodeIgniter**: versão 4.0  
+- **XAMPP**: versão 3.2.4 (com PHP 7.x)  
+- **Bootstrap**: versão 5 para layout responsivo  
+- **Extensão PHP**: `intl` (necessária para o funcionamento do CodeIgniter 4)
+
+---
+
+## 🧩 Funcionalidades
+
+- ✅ Criar novo cliente  
+- ✅ Editar cliente existente  
+- ✅ Excluir cliente  
+- ✅ Listar clientes com:
   - Nome
   - E-mail
   - Telefone
   - Miniatura da foto
-- ? Upload de imagem para `public/uploads/`
-- ? Valida��es frontend com JavaScript e backend com CodeIgniter
-- ? Estrutura completa com padr�o MVC
+- ✅ Upload de imagem para `public/uploads/`
+- ✅ Validações frontend com JavaScript e backend com CodeIgniter
+- ✅ Estrutura completa com padrão MVC
 
 ---
 
-## ?? Como iniciar o projeto
+## 🚀 Como iniciar o projeto
 
 1. Abra o terminal na raiz do projeto
 2. Execute o seguinte comando:
@@ -40,13 +40,13 @@ php spark serve
 
 ---
 
-## ?? Acesse o sistema
+## 🌐 Acesse o sistema
 
 [http://localhost/cadastro-clientes/public/](http://localhost/cadastro-clientes/public/)
 
 ---
 
-## ??? Habilitar a extens�o `intl` no XAMPP (se necess�rio)
+## 🛠️ Habilitar a extensão `intl` no XAMPP (se necessário)
 
 1. Abra o arquivo `php.ini`, geralmente em:  
    `C:\xampp\php\php.ini`
@@ -57,39 +57,39 @@ php spark serve
 ;extension=intl
 ```
 
-3. Remova o ponto-e-v�rgula para habilitar:
+3. Remova o ponto-e-vírgula para habilitar:
 
 ```ini
 extension=intl
 ```
 
 4. Salve o arquivo e reinicie o Apache no painel do XAMPP.
-5. Verifique no terminal se a extens�o foi ativada:
+5. Verifique no terminal se a extensão foi ativada:
 
 ```bash
 php -m | findstr intl
 ```
 
-Se aparecer `intl`, est� tudo certo!
+Se aparecer `intl`, está tudo certo!
 
 ---
 
-## ?? Estrutura de pastas recomendada
+## 📁 Estrutura de pastas recomendada
 
 Dentro da pasta do projeto, crie a seguinte estrutura:
 
 ```
 cadastro-clientes/
-??? writable/
-    ??? cache/
-    ??? logs/
-    ??? session/
-    ??? uploads/
+└── writable/
+    ├── cache/
+    ├── logs/
+    ├── session/
+    └── uploads/
 ```
 
-### ?? Permiss�es
+### 🔒 Permissões
 
-Garanta que essas pastas tenham permiss�o de escrita.  
+Garanta que essas pastas tenham permissão de escrita.  
 Em ambientes Linux:
 
 ```bash
@@ -98,24 +98,24 @@ chmod -R 777 writable/
 
 ---
 
-## ?? Bibliotecas e recursos externos utilizados
+## 🧰 Bibliotecas e recursos externos utilizados
 
 - [Bootstrap 5.3](https://getbootstrap.com/)
 - [Bootstrap Icons](https://icons.getbootstrap.com/)
-- [GLightbox](https://biati-digital.github.io/glightbox/) ? para lightbox de imagens
-- [jQuery](https://jquery.com/) ? para valida��es e intera��es no formul�rio
+- [GLightbox](https://biati-digital.github.io/glightbox/) – para lightbox de imagens
+- [jQuery](https://jquery.com/) – para validações e interações no formulário
 
 ---
 
-## ? Resultado Final
+## ✅ Resultado Final
 
-Um sistema funcional, moderno, leve e f�cil de manter para gerenciar clientes com:
+Um sistema funcional, moderno, leve e fácil de manter para gerenciar clientes com:
 
-- ? Responsividade
-- ? Upload e exibi��o de fotos
-- ? Valida��es client-side e server-side
-- ? C�digo limpo e organizado
+- ✅ Responsividade
+- ✅ Upload e exibição de fotos
+- ✅ Validações client-side e server-side
+- ✅ Código limpo e organizado
 
 ---
 
-## ????? Desenvolvido com ?? e ? por **Gilbert Sampaio**
+## 👨‍💻 Desenvolvido com 💻 e ☕ por **Gilbert Sampaio**
