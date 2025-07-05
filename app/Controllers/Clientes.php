@@ -12,18 +12,20 @@ class Clientes extends Controller
     public function __construct()
     {
         $this->clienteModel = new ClienteModel();
-        helper(['form', 'url']);
+        helper(['form', 'url', 'format']);
     }
 
     public function index()
     {
+        $data['title'] = 'Listagem de Clientes';
         $data['clientes'] = $this->clienteModel->findAll();
         echo view('clientes/index', $data);
     }
 
     public function criar()
     {
-        echo view('clientes/form');
+        $data['title'] = 'Novo Cliente';
+        echo view('clientes/form', $data);
     }
 
     public function salvar()
@@ -56,7 +58,7 @@ class Clientes extends Controller
         $this->clienteModel->save([
             'nome'     => $this->request->getPost('nome'),
             'email'    => $this->request->getPost('email'),
-            'telefone' => $this->request->getPost('telefone'),
+            'telefone' => limparTelefone($this->request->getPost('telefone')),
             'foto'     => $nomeFoto,
         ]);
 
@@ -70,8 +72,9 @@ class Clientes extends Controller
         if (!$cliente) {
             throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound("Cliente não encontrado.");
         }
-
-        echo view('clientes/form', ['cliente' => $cliente]);
+        $data['title'] = 'Editar Cliente';
+        $data['cliente'] =  $cliente;
+        echo view('clientes/form', $data);
     }
 
     public function atualizar($id = null)
@@ -113,7 +116,7 @@ class Clientes extends Controller
         $this->clienteModel->update($id, [
             'nome'     => $this->request->getPost('nome'),
             'email'    => $this->request->getPost('email'),
-            'telefone' => $this->request->getPost('telefone'),
+            'telefone' => limparTelefone($this->request->getPost('telefone')),
             'foto'     => $nomeFoto,
         ]);
 
