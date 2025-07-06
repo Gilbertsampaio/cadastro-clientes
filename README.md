@@ -31,7 +31,7 @@ Este é um sistema básico de cadastro de clientes desenvolvido com **CodeIgnite
 
 ## 🚀 Como iniciar o projeto
 
-1. Crie a tabela "clientes.sql" que está no diretória principal
+1. Crie a tabela "clientes.sql" que está no diretório principal
 2. Renomeie o arquivo env: .env
 3. Abra o terminal na raiz do projeto
 4. Execute o seguinte comando:
