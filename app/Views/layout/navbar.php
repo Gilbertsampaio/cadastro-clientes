@@ -12,7 +12,7 @@
 <nav class="navbar navbar-expand-lg shadow-sm">
     <div class="container-fluid px-4">
         <!-- Logo -->
-        <a class="navbar-brand d-flex align-items-center" href="#">
+        <a class="navbar-brand d-flex align-items-center" href="<?= base_url('/') ?>">
             <img src="<?= base_url('assets/img/logo.png') ?>" alt="Logo" width="40" height="40" class="me-2">
         </a>
 

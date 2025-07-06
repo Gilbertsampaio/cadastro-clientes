@@ -100,6 +100,10 @@
             align-items: center;
             justify-content: center;
         }
+
+        .text-danger-label {
+            color: #dc3545;
+        }
     </style>
 </head>
 

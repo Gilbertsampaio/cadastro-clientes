@@ -67,8 +67,33 @@
 
 <script>
   $(document).ready(function() {
-    $(document).ready(function() {
-      $('#telefone').mask('(00) 00000-0000');
+
+    $('#telefone').mask('(00) 00000-0000');
+
+    $('.form-control').on('blur', function() {
+      
+      const input = $(this);
+      const value = input.val().trim();
+      const id = input.attr('id');
+      const label = $("label[for='" + id + "']");
+
+      let isValid = true;
+
+      if (id === 'email') {
+        isValid = value !== '' && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+      } else if (id === 'foto') {
+        // Verifica se é cadastro e se o campo está vazio
+        if ($('form').attr('action').includes('salvar')) {
+          isValid = value !== '';
+        }
+      } else {
+        isValid = value !== '';
+      }
+
+      if (isValid) {
+        input.removeClass('is-invalid');
+        label.removeClass('text-danger-label');
+      }
     });
 
     $('form').on('submit', function(e) {
@@ -76,23 +101,32 @@
       let nome = $('#nome').val().trim();
       let email = $('#email').val().trim();
       let telefone = $('#telefone').val().trim();
+      let foto = $('#foto').val().trim();
       let msgErro = '';
-      let input = '';
 
       $('.form-control').removeClass('is-invalid');
+      $('.form-label').removeClass('text-danger-label');
 
       if (nome === '') {
         $('#nome').addClass('is-invalid');
+        $("label[for='nome']").addClass('text-danger-label');
         isValid = false;
-        msgErro = 'Por favor, informe o Nome do cliente.'
+        msgErro = 'Por favor, informe o Nome do cliente.';
       } else if (email === '' || !validateEmail(email)) {
         $('#email').addClass('is-invalid');
+        $("label[for='email']").addClass('text-danger-label');
         isValid = false;
-        msgErro = 'Por favor, informe o E-mail do cliente.'
+        msgErro = 'Por favor, informe o E-mail do cliente.';
       } else if (telefone === '') {
         $('#telefone').addClass('is-invalid');
+        $("label[for='telefone']").addClass('text-danger-label');
         isValid = false;
-        msgErro = 'Por favor, informe o Telefone do cliente.'
+        msgErro = 'Por favor, informe o Telefone do cliente.';
+      } else if (foto === '' && $('form').attr('action').includes('salvar')) {
+        $('#foto').addClass('is-invalid');
+        $("label[for='foto']").addClass('text-danger-label');
+        isValid = false;
+        msgErro = 'Por favor, escolha a foto do cliente.';
       }
 
       if (!isValid) {
